@@ -1,11 +1,13 @@
-const Feedback = ({good, neutral, bad, total, positive}) => {
+const Feedback = ({ good, neutral, bad, totalFeedback }) => {
   return (
     <>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive: {positive}</p>
+      <p><strong>Total: {totalFeedback}</strong></p>
+      {totalFeedback > 0 && (
+        <p>Positive: {Math.round((good / totalFeedback) * 100)}%</p>
+      )}
     </>
   );
 };
