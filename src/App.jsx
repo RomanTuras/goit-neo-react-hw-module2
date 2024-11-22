@@ -7,6 +7,7 @@ import Notification from "./components/Notification/Notification.jsx";
 
 function App() {
   let totalFeedback = 0;
+  let positive = 0;
 
   const [feedback, setFeedback] = useState(() => {
     const feedback = window.localStorage.getItem("feedback");
@@ -41,6 +42,7 @@ function App() {
   };
 
   totalFeedback = feedback.good + feedback.neutral + feedback.bad;
+  positive = Math.round((feedback.good / totalFeedback) * 100);
 
   return (
     <Container>
@@ -52,6 +54,7 @@ function App() {
           neutral={feedback.neutral}
           bad={feedback.bad}
           totalFeedback={totalFeedback}
+          positive={positive}
         />
       ) : (
         <Notification />
