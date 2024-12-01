@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "goit-neo-react-hw-module2",
+			"path": "."
+		},
+		{
+			"name": "my-react-project",
+			"path": "../my-react-project"
+		},
+		{
+			"name": "react-to-do",
+			"path": "../react-to-do"
+		},
+		{
+			"name": "goit-neo-react-hw-module3",
+			"path": "../goit-neo-react-hw-module3"
+		}
+	],
+	"settings": {}
+}
